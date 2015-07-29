@@ -290,7 +290,7 @@ def addPlotData(S):
 		# undefined
 		exx=eyy=float('nan') 
 	# deviatoric strain
-	eDev=ezz-(1/3.)*(2*err+ezz) # FIXME: is this correct?!
+	eDev=(2./3.)*(-err+ezz) # Fixed
 
 	surfLoad=(float('nan') if S.lab.stage=='compact' else S.lab.surfLoad)
 
